@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl} from '@angular/forms';
+import { FormGroup, FormControl,Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-child2',
@@ -8,7 +8,7 @@ import { FormGroup, FormControl} from '@angular/forms';
 })
 export class Child2Component implements OnInit {
   public child2InfoForm:FormGroup= new FormGroup({
-    phn: new FormControl("")
+    phn: new FormControl("", [Validators.required])
   })
   constructor() { }
 
