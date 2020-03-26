@@ -1,0 +1,9 @@
+
+<div class="container">
+    <form [formGroup] ="nestedForm" (ngSubmit) = "onSubmit()">
+  <app-child-form formControlName="childInfo"></app-child-form>
+  <app-child2></app-child2>
+  <button type="submit" [disabled]="nestedForm.invalid">Place Order</button>
+  </form>
+  </div>
+  
